@@ -4,7 +4,8 @@ services:
   sonarqube:
     image: sonarqube
     ports:
-      - '9000:9000'
+      - '9000:9000' # web-ui (http)
+      # - "443:9000"  # web-ui (https)
     networks:
       - sonarnet
     environment:
